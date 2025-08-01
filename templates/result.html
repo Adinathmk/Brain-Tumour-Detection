@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segmentation Result</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h2 {
+            font-size: 40px;
+            color: #222222;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            letter-spacing: 4px;
+            word-spacing: 6px;
+            margin: 30px 0px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        h3{
+            font-size: 50px;
+        }
+        p {
+            font-size: 19px;
+            color: #888888;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            text-align: center;
+            margin: 20px 0px 25px 0px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+        }
+        .container {
+            width: 1000px;
+            height: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            box-shadow: 1px 1px 10px #aaa;
+            background: rgb(255, 255, 255);
+            text-align: center;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+        }
+        .image-container img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 5px 5px 10px #2f2f2f;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 20px;
+            background-color: #7cc576;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #000000;
+        }
+        .black-box {
+            width: 250px;
+            height: auto;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .gray-box {
+            background-color: #000000;
+            padding: 20px;
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 1px 1px 10px #2f2f2f;
+        }
+        .gray-box h3, .gray-box p {
+            color: white;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Segmentation Result</h2>
+
+        <div class="image-container">
+            <div>
+                <p><strong>Original MRI</strong></p>
+                <img src="{{ input_image }}" alt="Original MRI">
+            </div>
+            <div>
+                <p><strong>Segmented Output</strong></p>
+                <img src="{{ result_image }}" alt="Segmented MRI">
+            </div>
+            <div>
+                <p><strong>Analysis</strong></p>
+                <div class="black-box">
+                    <div class="gray-box">
+                        <h3>Tumour to Brain Ratio</h3>
+                        <p>{{ tumor_brain_ratio }}</p>
+                    </div>
+                    <div class="gray-box">
+                        <h3>Severity Level</h3>
+                        <p>{{ severity_level }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a class="button" href="/">Upload Another</a>
+    </div>
+</body>
+</html>
