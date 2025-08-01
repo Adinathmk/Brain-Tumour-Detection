@@ -36,7 +36,7 @@ https://www.kaggle.com/code/abdallahwagih/brain-tumor-segmentation-unet-dice-coe
 🚀 How to Run the Project
 	1.	Clone the Repository
 
-git clone [https://github.com/yourusername/brain-tumour-detection.git](https://github.com/anuvindarajesh/Brain_tumour_detection)
+git clone [https://github.com/yourusername/brain-tumour-detection.git](https://github.com/Adinathmk/Brain-Tumour-Detection.git)
 cd brain-tumour-detection
 
 
@@ -72,12 +72,12 @@ python app.py
 	•	Improved interpretability and user experience through visual outputs
 
 👩‍💻 Team Members
-	•	Anuvinda R
 	•	Adinath M K
+	•	Anuvinda R
 	•	Arshad E
 
 
 📬 Contact
 
 For queries, feel free to reach out to us at:
-📧 anuvindarajesh0@gmail.com
+📧 adinathmkclt@gmail.com
