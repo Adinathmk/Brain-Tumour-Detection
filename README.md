@@ -62,7 +62,9 @@ python app.py
 
 📷 Screenshots
 ![1](https://github.com/user-attachments/assets/4a7dd795-12e2-4754-83c0-85db05258dfc)
+
 ![2](https://github.com/user-attachments/assets/d9974f55-0e95-4665-b089-8a38aaf45bfd)
+
 ![3](https://github.com/user-attachments/assets/92feba67-d55d-470a-a9bb-5bdda4ad5616)
 
 
