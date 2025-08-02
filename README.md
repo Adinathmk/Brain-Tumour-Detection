@@ -59,7 +59,9 @@ python app.py
 
 	5.	Open your browser and navigate to http://localhost:5000
 
+
 📷 Screenshots
+![1](https://github.com/user-attachments/assets/370c7ef1-1178-4f0d-9932-ea78c47a4329)
 
 ![WhatsApp Image 2025-04-03 at 21 29 39](https://github.com/user-attachments/assets/2e529b61-ffa0-4aed-9466-ddf3dfd9acf0)
 ![WhatsApp Image 2025-04-03 at 21 29 39 (1)](https://github.com/user-attachments/assets/38260908-664c-4f8d-adf1-79c16a07870c)
