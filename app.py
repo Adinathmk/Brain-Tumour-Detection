@@ -10,11 +10,11 @@ from PIL import Image
 app = Flask(__name__)
 
 # Load trained U-Net model
-# MODEL_PATH = "unet_brain.h5"
-# model = load_model(MODEL_PATH, compile=False)
+MODEL_PATH = "unet_brain.h5"
+model = load_model(MODEL_PATH, compile=False)
 
-MODEL_URL = "https://github.com/Adinathmk/Brain-Tumour-Detection/releases/download/Model/unet_brain.h5"
-MODEL_PATH = "/tmp/unet_brain.h5"  # Render allows writing to /tmp
+# MODEL_URL = "https://github.com/Adinathmk/Brain-Tumour-Detection/releases/download/Model/unet_brain.h5"
+# MODEL_PATH = "/tmp/unet_brain.h5"  # Render allows writing to /tmp
 
 # Configure upload and result folders
 UPLOAD_FOLDER = "static/uploads"
