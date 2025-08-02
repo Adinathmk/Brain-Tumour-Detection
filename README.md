@@ -61,11 +61,10 @@ python app.py
 
 
 📷 Screenshots
-![1](https://github.com/user-attachments/assets/370c7ef1-1178-4f0d-9932-ea78c47a4329)
+![1](https://github.com/user-attachments/assets/4a7dd795-12e2-4754-83c0-85db05258dfc)
+![2](https://github.com/user-attachments/assets/d9974f55-0e95-4665-b089-8a38aaf45bfd)
+![3](https://github.com/user-attachments/assets/92feba67-d55d-470a-a9bb-5bdda4ad5616)
 
-![WhatsApp Image 2025-04-03 at 21 29 39](https://github.com/user-attachments/assets/2e529b61-ffa0-4aed-9466-ddf3dfd9acf0)
-![WhatsApp Image 2025-04-03 at 21 29 39 (1)](https://github.com/user-attachments/assets/38260908-664c-4f8d-adf1-79c16a07870c)
-![WhatsApp Image 2025-03-16 at 22 29 43 (1)](https://github.com/user-attachments/assets/02741076-4835-438e-bd6a-4361272f91ec)
 
 
 📈 Results
