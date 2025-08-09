@@ -1,6 +1,7 @@
 import os
 import numpy as np
 import cv2
+import requests
 from flask import Flask, request, render_template
 from werkzeug.utils import secure_filename
 from tensorflow.keras.models import load_model
@@ -9,12 +10,24 @@ from PIL import Image
 # Initialize Flask app (default: looks in 'templates/' folder for HTML)
 app = Flask(__name__)
 
-# Load trained U-Net model
-# MODEL_PATH = "unet_brain.h5"
-# model = load_model(MODEL_PATH, compile=False)
-
+# Model download setup
 MODEL_URL = "https://github.com/Adinathmk/Brain-Tumour-Detection/releases/download/Model/unet_brain.h5"
 MODEL_PATH = "/tmp/unet_brain.h5"  # Render allows writing to /tmp
+
+# Download model if not already present
+if not os.path.exists(MODEL_PATH):
+    print("Downloading model from GitHub...")
+    r = requests.get(MODEL_URL, stream=True)
+    r.raise_for_status()
+    with open(MODEL_PATH, "wb") as f:
+        for chunk in r.iter_content(chunk_size=8192):
+            f.write(chunk)
+    print("Model downloaded successfully.")
+
+# Load trained U-Net model once at startup
+print("Loading model...")
+model = load_model(MODEL_PATH, compile=False)
+print("Model loaded successfully.")
 
 # Configure upload and result folders
 UPLOAD_FOLDER = "static/uploads"
