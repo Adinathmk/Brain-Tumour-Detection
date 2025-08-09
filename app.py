@@ -1,15 +1,20 @@
 import os
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # Suppress TensorFlow logs
-
 import numpy as np
 import cv2
 from flask import Flask, request, render_template
 from werkzeug.utils import secure_filename
 from tensorflow.keras.models import load_model
 from PIL import Image
+import logging
 
-# Flask app
+# Suppress TensorFlow logs
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+
+# Initialize Flask app
 app = Flask(__name__)
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
 
 # Folders for uploads/results
 UPLOAD_FOLDER = 'static/uploads'
@@ -31,7 +36,7 @@ def allowed_file(filename):
 # Preprocess for model
 def preprocess_image(image_path):
     img = Image.open(image_path).convert('RGB')
-    img = img.resize((256, 256))
+    img = img.resize((256, 256))  # Ensure this matches your model's input size
     img_array = np.array(img) / 255.0
     return np.expand_dims(img_array, axis=0)
 
@@ -94,6 +99,7 @@ def upload():
         )
 
     except Exception as e:
+        app.logger.error(f"Error processing file: {str(e)}")
         return f"Error: {str(e)}", 500
 
 if __name__ == '__main__':
