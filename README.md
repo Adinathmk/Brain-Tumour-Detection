@@ -26,7 +26,7 @@ This project aims to detect and classify brain tumours from MRI scans using imag
 	•	Email.js for contact form
 
 📊 Back-End
-	•	Flask (optional, if a backend is used for processing)
+	•	Flask 
 
 📁 Dataset
 
